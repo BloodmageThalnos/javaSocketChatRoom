@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bigMaha:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bigMaha_jar</output-path>
+    <root id="archive" name="bigMaha.jar">
+      <element id="module-output" name="bigMaha" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
