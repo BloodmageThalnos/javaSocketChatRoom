@@ -5,6 +5,9 @@ import java.net.*;
 
 public class test_1 {
     public test_1() {
+        scrollPane.setVerticalScrollBarPolicy(
+                JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        receiveTA.setLineWrap(true);
         System.setErr(new PrintStream(new OutputStream() {
             public void write(int b){}
             public void write(byte[] bytes,int a,int b) {
@@ -58,7 +61,8 @@ public class test_1 {
                         receiveTA.append("RECEIVE :\n  " + dString + "\n");
                     }else if(packet.getData()[0]==2) {  //接受文件
                         receiveTA.append("Prepare to receive file.\n");
-                        File file = new File("D:\\received.txt");
+                        String fileTo = JOptionPane.showInputDialog("Please input restore position.");
+                        File file = new File(fileTo);
                         FileOutputStream fStream = new FileOutputStream(file);
                         while(true){
                             socket.receive(packet);
@@ -68,7 +72,7 @@ public class test_1 {
                             fStream.write(packet.getData(),0,packet.getLength());
                         }
                         fStream.close();
-                        receiveTA.append("File has been successfully received in D:\\received.txt. \n");
+                        receiveTA.append("File has been successfully received in "+ fileTo +" \n");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -141,6 +145,7 @@ public class test_1 {
     private JTextField myhostTF;
     private JButton startButton;
     private JButton sendButton;
+    private JScrollPane scrollPane;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("test_1");

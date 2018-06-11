@@ -32,25 +32,30 @@
               <text value="Input"/>
             </properties>
           </component>
-          <component id="f803c" class="javax.swing.JTextArea" binding="receiveTA">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="1" use-parent-layout="false">
-                <preferred-size width="400" height="400"/>
-              </grid>
-            </constraints>
-            <properties>
-              <editable value="false"/>
-              <font size="16"/>
-            </properties>
-          </component>
           <component id="b3c64" class="javax.swing.JButton" binding="sendButton">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <label value="Send"/>
+              <text value="Send"/>
             </properties>
           </component>
+          <scrollpane id="f7ab4" binding="scrollPane">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="400" height="400"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="8d78d" class="javax.swing.JTextArea" binding="receiveTA">
+                <constraints/>
+                <properties/>
+              </component>
+            </children>
+          </scrollpane>
         </children>
       </grid>
       <grid id="67343" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
